@@ -1,0 +1,74 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Task Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Task Manager</h1>
+
+  <section>
+    <h2>Add New Task</h2>
+    <input type="text" id="title" placeholder="Task Title">
+    <input type="text" id="desc" placeholder="Task Description">
+    <select id="status">
+      <option>Pending</option>
+      <option>In Progress</option>
+      <option>Completed</option>
+    </select>
+    <button onclick="addTask()">Add Task</button>
+  </section>
+
+  <hr>
+
+  <section>
+    <h2>Update Task</h2>
+    <input type="number" id="updateId" placeholder="Task ID">
+    <input type="text" id="updateTitle" placeholder="New Title">
+    <input type="text" id="updateDesc" placeholder="New Description">
+    <select id="updateStatus">
+      <option>Pending</option>
+      <option>In Progress</option>
+      <option>Completed</option>
+    </select>
+    <button onclick="updateTask()">Update Task</button>
+  </section>
+
+  <hr>
+
+  <section>
+    <h2>Get Task by ID</h2>
+    <input type="number" id="getId" placeholder="Enter Task ID">
+    <button onclick="getTaskById()">Fetch</button>
+    <div id="taskDetails"></div>
+  </section>
+
+
+  <hr>
+
+  <section>
+    <h2>All Tasks</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="taskList"></tbody>
+    </table>
+  </section>
+
+  
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
+
